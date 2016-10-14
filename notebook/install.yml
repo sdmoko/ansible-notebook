@@ -1,0 +1,33 @@
+---
+- hosts: laptop
+  remote_user: moko
+  become: yes
+  become_method: sudo
+  tasks:
+    - name: Install Packages
+      apt: name={{ item }} state=latest
+      with_items:
+        - vim
+        - git
+        - curl
+        - screen
+        - nmap
+        - htop
+        - rsync
+        - zsync
+        - tcpdump
+        - pm-utils
+        - traceroute
+        - libssl-dev
+        - build-essential
+        - apt-transport-https
+        - ca-certificates
+        - vlc
+        - midori
+        - virtualbox
+        - qemu
+        - qemu-kvm
+        - libvirt-bin
+        - virt-manager
+        - qemu-user-static
+        - nginx
