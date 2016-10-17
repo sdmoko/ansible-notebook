@@ -1,5 +1,5 @@
 ---
-- hosts: laptop
+- hosts: blankon
   remote_user: moko
   become: yes
   become_method: sudo
@@ -31,3 +31,10 @@
         - virt-manager
         - qemu-user-static
         - nginx
+        - ansible
+        - iptables-persistent
+        - ntp
+        - icedove
+        - dia
+        - dia-rib-network
+        - gparted
